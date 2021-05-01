@@ -24,9 +24,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = '&*kounfjr3xw9^0h6=tz^patca49+nr%&zmw2)66g^mhc5(+-p'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['127.0.0.1']
 
 
 # Application definition
@@ -45,6 +45,7 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -145,4 +146,4 @@ EMAIL_HOST= 'smtp.gmail.com'
 EMAIL_PORT = 587
 EMAIL_HOST_USER = 'vinshot75@gmail.com'
 EMAIL_HOST_PASSWORD = 'Temporary@'
-EMAIL_USE_TLS = True 
+EMAIL_USE_TLS = True
